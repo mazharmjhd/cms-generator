@@ -1,0 +1,6 @@
+sudo ./cms-generator.sh
+sudo ./approve.sh
+
+cd /opt/docker/wordpress/webname
+docker compose --env-file .env up -d
+

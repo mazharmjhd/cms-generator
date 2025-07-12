@@ -1,0 +1,3 @@
+0 2 * * * /opt/docker/cms-generator/backup.sh >> /var/log/wp_backup.log 2>&1
+30 3 * * * /opt/docker/cms-generator/certbot-auto-ssl.sh >> /var/log/wp_ssl.log 2>&1
+
