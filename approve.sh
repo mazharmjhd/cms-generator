@@ -5,7 +5,7 @@ SITE_DIR=/opt/docker/wordpress/$WEBNAME
 
 if [ -d "$SITE_DIR" ]; then
   touch "$SITE_DIR/.approved"
-  echo "[✓] Approved: $WEBNAME"
+  echo "[OK] Approved: $WEBNAME"
 else
   echo "[!] Folder tidak ditemukan: $SITE_DIR"
 fi

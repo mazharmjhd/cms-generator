@@ -17,7 +17,10 @@ if [ ! -d "$SITE_DIR" ]; then
   cp "$SCRIPT_DIR/templates/docker-compose.yml" "$SITE_DIR/docker-compose.yml"
   sed -i "s/{webname}/$WEBNAME/g; s/{port}/$PORT/g" "$SITE_DIR/docker-compose.yml"
 
-  #config nginx
+  # Pastikan folder NGINX config ada
+  mkdir -p /etc/nginx/sites-enabled
+
+  # Generate config NGINX
   NGINX_SITE="/etc/nginx/sites-enabled/$WEBNAME.conf"
   cp "$SCRIPT_DIR/templates/nginx-site.conf" "$NGINX_SITE"
   sed -i "s/{webname}/$WEBNAME/g; s/{port}/$PORT/g" "$NGINX_SITE"

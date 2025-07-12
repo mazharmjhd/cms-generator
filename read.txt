@@ -1,6 +1,28 @@
+cara menjalankan cms-generator
+
 sudo ./cms-generator.sh
 sudo ./approve.sh
 
 cd /opt/docker/wordpress/webname
-docker compose --env-file .env up -d
+docker-compose --env-file .env up -d
 
+--atau pindahkan .env manual ke folder webname
+
+
+
+
+
+
+
+
+
+
+--domain / subdomain checker
+
+--need install for domain
+sudo apt install whois -y
+sudo ./domain-checker.sh
+
+--need install for subdomain 
+sudo apt install dnsutils -y
+sudo ./subdomain-checker.sh
